@@ -1,0 +1,34 @@
+<html>
+<head>
+   <style>
+    .dark{
+        background: #252525;
+        color: #fff;
+    } 
+</style> 
+</head>
+<body>
+<h2>Test</h2>
+
+<button onclick="removeFunction()">Remove LocalStorage</button>
+
+
+
+
+<script>
+let currentTheme = localStorage.getItem("theme");
+if(currentTheme === "dark"){
+    document.body.classList.add("dark");
+}
+
+
+/*console.log(localStorage.length);
+console.log(localStorage);*/
+
+function removeFunction(){
+    localStorage.removeItem("theme")
+    localStorage.clear()                     //All keys remove      
+}                   
+</script>
+</body>
+</html>
